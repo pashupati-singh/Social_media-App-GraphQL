@@ -60,69 +60,103 @@ Bcrypt: Password hashing library
 
 ----------------------
 query getUserById($userid:ID!){
+
   user(_id:$userid){
+  
     _id
+    
     firstName
+    
     lastName
+    
     email
   }
 }
 -----------------------------
 query getAllQuotes{
+
   quotes{
+  
     name
+
     by  
   }
 }
 
 -----------------
 query getQuoteByUser($quoteby:ID!){
+
   iquote(by:$quoteby){
+  
     name
+    
     by
+    
   }
 }
 
 ------------
 mutation createUser($userNew:UserInput!){
+
   user:signupUser(userNew:$userNew){ 
+  
     _id
+
     email
+    
     firstName
+    
     lastName
+
   }
 }
 
 CLIENT SIDE DATA
+
 {
+
   "userNew": {
+  
     "firstName": "chiku",
+    
     "lastName": "singh",
+    
     "email": "C@gmail.com",
+    
     "password": "123456"
+    
   }
 }
 
 --------
 mutation SigninUser($userSignin:UserSigninInput!){
+
   user:signinUser(userSignin:$userSignin){ 
+  
     token
+    
   }
 }
 
 CLIENT SIDE DATA
 
 {
+
   "userSignin": {
+  
     "email": "xyz@gmail.com",
+    
     "password": "XXXXX"
+    
   }
 }
 ------
 
 
 mutation createQuote{
+
   quote:createQuote(name:"i am another nice quote")
+  
 }
 
 -------------
