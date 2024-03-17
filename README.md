@@ -3,9 +3,11 @@
 Welcome to the server-side codebase of the Social Media App. This application allows users to register, login, write quotes, and perform other social interactions. It is built using Node.js, GraphQL, Apollo Server, MongoDB, Mongoose, JWT, and other technologies.
 
 # Deploy Link
+
 https://social-media-app-graphql.onrender.com/
 
 # Getting Started
+
 To get started with the project, follow these steps:
 
 1. Clone the Repository:
@@ -18,27 +20,40 @@ cd Social_media-App-GraphQL
 3. Set Up Environment Variables:
 Create a .env file in the root directory and define the following variables:
 
-MONGO_URI=<mongodb-uri>
-JWT_SECRET=<jwt-secret-key>
+MONGO_URI=""
+JWT_SECRET="SOCIALMEDIA"
 
 4. Run server: npm run server
 5. Deployment on Render:
 
 Create an account on Render (https://render.com/)
+
 Set up a new web service for your server-side application
+
 Configure environment variables and other settings as needed
+
 Deploy your application to Render using Git integration or other deployment methods
 
 # Technologies Used
+
 Node.js: JavaScript runtime environment
+
 GraphQL: Query language for APIs
+
 Apollo Server: GraphQL server library
+
 Apollo Server Core: Core functionality for Apollo Server
+
 MongoDB: NoSQL database for storing user data
+
 Mongoose: MongoDB object modeling for Node.js
+
 JWT (JSON Web Tokens): Token-based authentication mechanism
+
 Dotenv: Environment variable management
+
 Nodemon: Development utility for auto-restarting the server
+
 Bcrypt: Password hashing library
 
 # All Querys and Mutations
@@ -96,9 +111,10 @@ mutation SigninUser($userSignin:UserSigninInput!){
 }
 
 CLIENT SIDE DATA
+
 {
   "userSignin": {
-    "email": "XYZ@gmail.com",
+    "email": "xyz@gmail.com",
     "password": "XXXXX"
   }
 }
